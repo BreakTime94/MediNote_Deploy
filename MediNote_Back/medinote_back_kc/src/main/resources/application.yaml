@@ -1,0 +1,43 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  forward-headers-strategy: framework
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: DEBUG
+
+spring:
+  config:
+    import:
+      - optional:classpath:secret/db.yml
+      - optional:classpath:secret/jwt.yml
+      - optional:classpath:secret/redis.yml
+      - optional:classpath:secret/application-oauth.yml
+      - optional:classpath:secret/google-email.yml
+  application:
+    name: medinote
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MariaDBDialect
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss   # 날짜 포맷
+    time-zone: Asia/Seoul             # 타임존
+    serialization:
+      write-dates-as-timestamps: false # 숫자 timestamp 대신 문자열로 출력

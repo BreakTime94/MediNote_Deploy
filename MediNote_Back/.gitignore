@@ -1,0 +1,55 @@
+# 공통 OS/에디터 잡파일
+.DS_Store
+Thumbs.db
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Gradle 공통
+.gradle/
+build/
+
+#secret 폴더
+secret/
+
+# 서비스별 빌드 디렉토리 (루트에서 무시)
+member-auth-service/build/
+health-insurance-chat-service/build/
+content-admin-service/build/
+
+# 로그/클래스 파일
+*.log
+*.class
+
+# Node (혹시 백엔드에 섞이면)
+node_modules/
+
+### Docker & Build ###
+*.jar
+*.war
+*.pid
+**/build/
+**/target/
+**/.docker/
+
+### Logs ###
+logs/
+log/
+
+### Secrets & Config ###
+src/main/resources/secret/
+src/main/resources/application-*.yml
+src/main/resources/application-*.properties
+
+### Node (React) ###
+dist/
+
+### 환경변수 (Docker 배포용)
+.env

@@ -1,0 +1,27 @@
+/* 전역 색/그라데이션 토큰 (Tailwind v4와 임의값 잘 맞습니다) */
+:root {
+    /* 메인 그라데이션 */
+    --grad-main-from: #ff9bd4; /* 파스텔 핑크 */
+    --grad-main-to:   #c89cff; /* 파스텔 퍼플 */
+
+    /* 서브/포인트 */
+    --color-bg:    #ffffff;
+    --color-point: #7c4dff;
+
+    /* 보조 토큰(테두리/그림자/포커스 링 등) */
+    --border-soft:        #e5e7eb;  /* slate-200 유사 */
+    --text-strong:        #0f172a;  /* slate-900 유사 */
+    --focus-ring:         color-mix(in oklab, var(--color-point) 58%, white);
+    --white-hover:        #f8fafc;  /* slate-50 유사 */
+}
+
+/* 그라데이션 유틸리티 클래스(임의값 지원으로 Tailwind와 잘 섞임) */
+.bg-grad-main {
+    @apply bg-gradient-to-r from-[var(--grad-main-from)] to-[var(--grad-main-to)];
+}
+
+/* 공통 포커스 링(원하면 컴포넌트에서 @apply로 사용 가능) */
+.focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    box-shadow: 0 0 0 2px var(--focus-ring);
+}

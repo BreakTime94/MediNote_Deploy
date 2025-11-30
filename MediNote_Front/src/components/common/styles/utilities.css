@@ -1,0 +1,15 @@
+/* src/styles/utilities.css */
+@layer utilities {
+    /* 메인 그라디언트 배경 */
+    .bg-grad-main {
+        background-image: linear-gradient(90deg, #ff9bd4 0%, #c89cff 100%);
+    }
+
+    /* (선택) 메인 그라디언트 텍스트 */
+    .text-grad-main {
+        background-image: linear-gradient(90deg, #ff9bd4 0%, #c89cff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}

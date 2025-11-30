@@ -1,0 +1,19 @@
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* 크기 조절 */
+    height: 44px; /* 크기 조절 */
+    padding: 0;
+    border: 1px solid #e0e0e0; /* 연한 테두리 */
+    border-radius: 12px; /* 둥근 모서리 */
+    background-color: #ffffff;
+    color: #333333; /* 아이콘 색상 */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+    background-color: #f5f5f5; /* 호버 시 배경색 변경 */
+    border-color: #cccccc;
+}

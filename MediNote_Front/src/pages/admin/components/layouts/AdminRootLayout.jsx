@@ -1,0 +1,29 @@
+import {Outlet} from "react-router-dom";
+import {Toaster} from "react-hot-toast";
+import AdminNav from "../nav/AdminNav.jsx"
+import AdminHeader from "../header/AdminHeader.jsx";
+import AdminFooter from "../footer/AdminFooter.jsx";
+
+export default function AdminRootLayout() {
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* 전체 화면 높이를 차지하는 flex 컨테이너 */}
+
+            <header>
+                <AdminHeader/>
+                <AdminNav/>
+            </header>
+
+            <main className="flex-1">
+                {/* flex-1: 남은 공간을 전부 차지 */}
+                <Outlet/>
+            </main>
+
+            <footer>
+                <AdminFooter/>
+            </footer>
+          {/* react-hot-toast는 이게 없으면 안 보임 */}
+          <Toaster position="top-center" />
+        </div>
+    );
+}

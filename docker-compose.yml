@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+
+  # ==========================
+  # 🟦 Backend 1 (kc) - 8083
+  # ==========================
+  medinote-back-kc:
+    container_name: medinote-back-kc
+    build:
+      context: ./MediNote_Back/medinote_back_kc
+      dockerfile: Dockerfile
+    env_file:
+      - ./MediNote_Back/medinote_back_kc/.env
+    volumes:
+      - ./MediNote_Back/medinote_back_kc/app.jar:/app/app.jar
+    ports:
+      - "8083:8080"
+    restart: always
+    networks:
+      - medinote-network
+
+
+  # ==========================
+  # 🟧 Backend 2 (khs) - 8081
+  # ==========================
+  medinote-back-khs:
+    container_name: medinote-back-khs
+    build:
+      context: ./MediNote_Back/medinote_back_khs
+      dockerfile: Dockerfile
+    env_file:
+      - ./MediNote_Back/medinote_back_khs/.env
+    volumes:
+      - ./MediNote_Back/medinote_back_khs/app.jar:/app/app.jar
+    ports:
+      - "8081:8080"
+    restart: always
+    networks:
+      - medinote-network
+
+
+  # ==========================
+  # 🟪 Backend 3 (kys) - 8082
+  # ==========================
+  medinote-back-kys:
+    container_name: medinote-back-kys
+    build:
+      context: ./MediNote_Back/medinote_back_kys
+      dockerfile: Dockerfile
+    env_file:
+      - ./MediNote_Back/medinote_back_kys/.env
+    volumes:
+      - ./MediNote_Back/medinote_back_kys/app.jar:/app/app.jar
+    ports:
+      - "8082:8080"
+    restart: always
+    networks:
+      - medinote-network
+
+
+  # ==========================
+  # 🟩 Frontend (React)
+  # ==========================
+  front:
+    container_name: medinote-front
+    build:
+      context: ./MediNote_Front
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - medinote-network
+
+
+  # ==========================
+  # 🔵 NGINX
+  # ==========================
+  nginx:
+    container_name: medinote-nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - medinote-back-kc
+      - medinote-back-khs
+      - medinote-back-kys
+      - front
+    restart: always
+    networks:
+      - medinote-network
+
+
+# ==========================
+# 🌐 Network
+# ==========================
+networks:
+  medinote-network:
+    driver: bridge
