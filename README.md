@@ -9,4 +9,37 @@
 - 담당 역할: 회원 관리 전반, Spring Security 관리, MSA GateWay 관리
 
 
+### 🛠 기술 스택
+### Backend
+- Java 21
+- Spring Boot 3.5.3
+- Spring Security (JWT, OAuth2)
+- JPA
+- MapStruct
+- MariaDB, Redis, Postman
+
+### Frontend
+- React (Vite)
+- JavaScript
+- StoryBook
+- Zustand
+- Tailwind CSS
+
+### Infra / DevOps
+- IntelliJ
+- Goole Sheets
+- Discord
+- Github
+- Docker
+- Oracle Cloud Free Tier
+- Nginx
+  
+### Table 정의서
+<img width="1054" height="435" alt="image" src="https://github.com/user-attachments/assets/9d7144f6-3e7c-40ef-8a85-ced8105ad1bf" />
+
+### 프로토타입 & WBS 
+<img width="1110" height="398" alt="image" src="https://github.com/user-attachments/assets/f9d5f038-68d2-4ea9-8ccd-b18d781cf6df" />
+
+### 프로젝트 구조
+<img width="1094" height="417" alt="image" src="https://github.com/user-attachments/assets/8e830948-b8ba-4fe9-aa7b-12be981ad812" />
 
