@@ -16,14 +16,14 @@
 - Spring Security (JWT, OAuth2)
 - JPA
 - MapStruct
-- MariaDB, Redis, Postman
+- MariaDB, Redis, Postman 등
 
 ### Frontend
 - React (Vite)
 - JavaScript
 - StoryBook
 - Zustand
-- Tailwind CSS
+- Tailwind CSS 등
 
 ### Infra / DevOps
 - IntelliJ
@@ -32,7 +32,7 @@
 - Github
 - Docker
 - Oracle Cloud Free Tier
-- Nginx
+- Nginx 등
   
 ### Table 정의서
 <img width="1054" height="435" alt="image" src="https://github.com/user-attachments/assets/9d7144f6-3e7c-40ef-8a85-ced8105ad1bf" />
