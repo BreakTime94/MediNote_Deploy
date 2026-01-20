@@ -43,6 +43,15 @@
 ### 프로젝트 구조
 <img width="1094" height="417" alt="image" src="https://github.com/user-attachments/assets/8e830948-b8ba-4fe9-aa7b-12be981ad812" />
 
+### 주요기능
+<img width="994" height="561" alt="image" src="https://github.com/user-attachments/assets/cac14e58-311f-47c2-b0df-4ebc454b4d0c" />
 
 ### Test 계정 
 - 1234@naver.com / 1234
+
+#### 커밋이력
+##### 20260120 기존 배포 프로젝트 오류 1차 수정 및 재배포 
+- 구글 탭창 (vite+config) 수정, MediNote 로고 추가
+- Docker Container 내부 Port 번호 오설정(로컬 개발 당시 application.yml 설정 그대로 배포 -> 전부 8080으로 수정)
+- medinote_back_kc 내 GateWayController DockerNetWork 활용하여 도커 컨테이너 명:8080으로 변경하여 분기처리
+- Google Redirect URL .env에 직접 HardCoding
