@@ -67,6 +67,8 @@ services:
     build:
       context: ./MediNote_Front
       dockerfile: Dockerfile
+    ports:
+      - "4173:4173"
     restart: always
     networks:
       - medinote-network
