@@ -43,3 +43,6 @@
 ### 프로젝트 구조
 <img width="1094" height="417" alt="image" src="https://github.com/user-attachments/assets/8e830948-b8ba-4fe9-aa7b-12be981ad812" />
 
+
+### Test 계정 
+- 1234@naver.com / 1234
