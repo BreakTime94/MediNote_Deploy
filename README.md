@@ -54,4 +54,4 @@
 - 구글 탭창 (vite+config) 수정, MediNote 로고 추가
 - Docker Container 내부 Port 번호 오설정(로컬 개발 당시 application.yml 설정 그대로 배포 -> 전부 8080으로 수정)
 - medinote_back_kc 내 GateWayController DockerNetWork 활용하여 도커 컨테이너 명:8080으로 변경하여 분기처리
-- Google Redirect URL .env에 직접 HardCoding
+- Google Redirect URL .env에 직접 주입
