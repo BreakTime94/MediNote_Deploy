@@ -59,4 +59,4 @@
 ##### 20260121 기존 배포 프로젝트 오류 2차 수정 및 재배포 
 - 도커 파일 수정 중에 정적 파일 빌드 및 배포 방식-> vite preview 서버 기반 동적 배포로 변경 (컨테이너 관리 및 nginx conf, Dockerfile 등이 직관적인 방법으로 변경)
 - GateWayController는 작동하나 응답 내용을 String.class로 가공하여 작성할 때 생기는 에러가 있었음. -> GateWay의 파이프 역항을 살리기 위해 byte[]로 응답 처리
-- (보완사항) OAuth2 로그인 redirect 문제 미해결, 로그아웃 버튼 미작동
+- (보완사항) OAuth2 로그인 redirect 문제 미해결, kakao 맵 미표시
